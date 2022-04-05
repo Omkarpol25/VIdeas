@@ -129,7 +129,7 @@ h1
 {
   float: left;
   width: 1080px;
-  margin: -157px 8px 2px 14px;
+  margin: -175px 8px 2px 14px;
   clear: right;
   border: 2px solid black;
   padding: 2px 2px;
@@ -153,6 +153,9 @@ h1
 input[type=text]
 {
   width: 245px;
+}
+.card{
+  display: none;
 }
 .card img
 {
@@ -187,6 +190,16 @@ h3
   margin: 1px;
   border-bottom: 1px solid black;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.show
+{
+  display:inline-block;
+}
+h4
+{
+  text-decoration: none;
+  display: inline;
+  font-weight: normal;
 }
 @media screen and (max-width: 600px)
 {
@@ -315,7 +328,7 @@ h3
   {
     font-size: 9px;
   }
-  input[type=checkbox]
+  input[type=radio]
   {
     width: 8px;
     height: 8px;
@@ -345,4 +358,4 @@ h3
     margin-right: 30px;
     margin-top: 7px;
   }
-}  
+}
