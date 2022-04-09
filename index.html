@@ -1,173 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>V-Ideas</title>
-  <link rel="icon" type="image/jpg" sizes="16x16" href="VIT_Favicon.jpg" >
+  <link rel="icon" type="image/jpg" sizes="16x16" href="VIT_Favicon.jpg">
   <link rel="stylesheet" href="style.CSS">
 </head>
+
 <body>
- <div id="upmain">
-  <header>
-  <h1>V-Ideas</h1>
-  <figure id="logo">
-  <a href="https://vit.edu.in/" target="blank" title="Vidyalankar Institute of Technology Official Website">    
-  <img src="VIT_Logo.jpg" width="418px" alt="Logo of Vidyalankar Institute of Technology"></a>
-  </figure>
-  <nav class="topnav-right">
-    <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><button onclick="openForm()">Login</button>
-        <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
-              <h2>Login</h2>
-  
-              <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
-  
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-  
-              <button type="submit" class="btn">Login</button>
-              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-          </form>
+  <div id="upmain">
+    <header>
+      <h1>V-Ideas</h1>
+      <figure id="logo">
+        <a href="https://vit.edu.in/" target="blank" title="Vidyalankar Institute of Technology Official Website">
+          <img src="VIT_Logo.jpg" width="418px" alt="Logo of Vidyalankar Institute of Technology"></a>
+      </figure>
+      <nav class="topnav-right">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><button onclick="openForm()">Login</button>
+            <div class="form-popup" id="myForm">
+              <form action="/action_page.php" class="form-container">
+                <h2>Login</h2>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              </form>
+            </div>
+          </li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      <span class="align">
+        <input type="text" id="search" placeholder="Search for field or guides of project" aria-label="Search">
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </span>
+      <div class="topnav-left">
+        <form action="">
+          <ul>
+            <li><input type="radio" name="subject" id="All" checked onclick="filterSelection('all')">
+              <label for="All">All</label>
+            </li>
+            <li><input type="radio" name="subject" id="CS">
+              <label for="CS">CS</label>
+            </li>
+            <li><input type="radio" name="subject" id="IT">
+              <label for="IT">IT</label>
+            </li>
+            <li><input type="radio" name="subject" id="EXTC">
+              <label for="EXTC">EXTC</label>
+            </li>
+            <li><input type="radio" name="subject" id="ETRX">
+              <label for="ETRX">ETRX</label>
+            </li>
+            <li><input type="radio" name="subject" id="Bio_Med">
+              <label for="Bio_Med">Bio Med</label>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </header>
+  </div>
+  <div id="main">
+    <div class="container" id="cont">
+      <h3>Fields</h3>
+      <div>
+        <input type="radio" id="Show_All" Value="Show All" name="field" checked onclick="filterSelection('all')">
+        <lable for="Show All">Show All</lable><br>
+
+        <input type="radio" id="Networking" Value="Networking" name="field" onclick="filterSelection('Networking')">
+        <lable for="Networking">Networking</lable><br>
+
+        <input type="radio" id="Web_Tech" Value="Web_Tech" name="field" onclick="filterSelection('Web_Tech')">
+        <lable for="Web Technology">Web Technology</lable><br>
+
+        <input type="radio" id="Database" Value="Database" name="field" onclick="filterSelection('Database')">
+        <lable for="Database">Database</lable><br>
+
+        <input type="radio" id="AI" Value="AI" name="field" onclick="filterSelection('AI')">
+        <lable for="Artificial Intelligence">Artificial Intelligence</lable><br>
+
+        <input type="radio" id="IP" Value="IP" name="field" onclick="filterSelection('IP')">
+        <lable for="Image Processing">Image Processing</lable><br>
+
+        <input type="radio" id="Robotics" Value="Robotics" name="field" onclick="filterSelection('Robotics')">
+        <lable for="Robotics">Robotics</lable><br>
+      </div>
+    </div>
+    <div class="container">
+      <h3>Faculty</h3>
+      <div>
+        <input type="radio" id="Show_All" checked Value="Show All" name="Faculty" onclick="filterSelection('all')">
+        <lable for="Show All">Show All</lable><br>
+
+        <input type="radio" id="Girish_Gidaye" Value="Girish Gidaye" name="Faculty"
+          onclick="filterSelection('Girish_Gidaye')">
+        <lable for="Girish Gidaye">Girish Gidaye</lable><br>
+
+        <input type="radio" id="Akhil_Masurkar" Value="Akhil Masurkar" name="Faculty"
+          onclick="filterSelection('Akhil_Masurkar')">
+        <lable for="Akhil Masurkar">Akhil Masurkar</lable><br>
+
+        <input type="radio" id="Uma_Jaishankar" Value="Uma Jaishankar" name="Faculty"
+          onclick="filterSelection('Uma_Jaishankar')">
+        <lable for="Uma Jaishankar">Uma Jaishankar</lable><br>
+
+        <input type="radio" id="Ulka_Padwalkar" Value="Ulka Padwalkar" name="Faculty"
+          onclick="filterSelection('Ulka_Padwalkar')">
+        <lable for="Ulka Padwalkar">Ulka Padwalkar</lable><br>
+
+        <input type="radio" id="Pravin_Annadate" Value="Pravin Annadate" name="Faculty"
+          onclick="filterSelection('Pravin_Annadate')">
+        <lable for="Pravin Annadate">Pravin Annadate</lable><br>
+
+        <input type="radio" id="Arun_Chavan" Value="Arun Chavan" name="Faculty"
+          onclick="filterSelection('Arun_Chavan')">
+        <lable for="Arun Chavan">Arun Chavan</lable><br>
+      </div>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="column Arun_Chavan">
+          <a href="proj1.html" target="_blank">
+            <div class="card "><img src="p1.jpg" width="100%"><br><b>Project Title :</b> Touchless
+              Dispensor<br><b>Student Name :</b>
+              <ul>
+                <li>Kanchan Suryawanshi</li>
+                <li>Tripta Sharma</li>
+                <li>Nikita Gharat</li>
+                <li>Mounika Lokam</li>
+              </ul><b>Project Guide:</b>
+              <h4>Prof.Arun Chavan</h4>
+            </div>
+          </a>
         </div>
-      </li>
-      <li><a href="#">Wishlist</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-  </nav>
-  <span class="align">
-    <input type="text" id="search" placeholder="Search for field or guides of project" aria-label="Search">    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <button type="submit"><i class="fa fa-search"></i></button>
-  </span>
-  <div class="topnav-left">
-    <form action="">
-    <ul> 
-    <li><input type="radio" name="subject" id="All" checked onclick="filterObjects('all')">
-    <label for="All">All</label></li>
-    <li><input type="radio" name="subject" id="CS">
-    <label for="CS">CS</label></li>
-    <li><input type="radio" name="subject" id="IT">
-    <label for="IT">IT</label></li>
-    <li><input type="radio" name="subject" id="EXTC">
-    <label for="EXTC">EXTC</label></li>
-    <li><input type="radio" name="subject" id="ETRX">
-    <label for="ETRX">ETRX</label></li>
-    <li><input type="radio" name="subject" id="Bio_Med">
-    <label for="Bio_Med">Bio Med</label></li>
-    </ul>
-    </form>
-  </div> 
-  </header>
- </div>
- <div id="main"> 
-  <div class="container" id="cont">
-    <h3>Fields</h3>
-    <div>
-      <input type="radio" id="Show_All" Value="Show All" name="field" checked onclick="filterObjects('all')">
-      <lable for="Show All">Show All</lable><br>
 
-      <input type="radio" id="Networking" Value="Networking" name="field" onclick="filterObjects('Networking')">
-      <lable for="Networking">Networking</lable><br>
-
-      <input type="radio" id="Web_Tech"  Value="Web_Tech" name="field" onclick="filterObjects('Web_Tech')">
-      <lable for="Web Technology">Web Technology</lable><br>
-
-      <input type="radio" id="Database"  Value="Database" name="field" onclick="filterObjects('Database')">
-      <lable for="Database">Database</lable><br>
-
-      <input type="radio" id="AI"  Value="AI" name="field" onclick="filterObjects('AI')">
-      <lable for="Artificial Intelligence">Artificial Intelligence</lable><br>
-    
-      <input type="radio" id="IP"  Value="IP" name="field" onclick="filterObjects('IP')">
-      <lable for="Image Processing">Image Processing</lable><br>
-    
-      <input type="radio" id="Robotics"  Value="Robotics" name="field" onclick="filterObjects('Robotics')">
-      <lable for="Robotics">Robotics</lable><br>
-    </div>
-  </div>
-  <div class="container">
-    <h3>Faculty</h3>
-    <div>
-      <input type="radio" id="Show_All" checked Value="Show All" name="Faculty" onclick="filterObjects('all')">
-      <lable for="Show All">Show All</lable><br>
-
-      <input type="radio" id="Girish_Gidaye" Value="Girish Gidaye" name="Faculty" onclick="filterObjects('Girish_Gidaye')">
-      <lable for="Girish Gidaye">Girish Gidaye</lable><br>
-
-      <input type="radio" id="Akhil_Masurkar"  Value="Akhil Masurkar" name="Faculty" onclick="filterObjects('Akhil_Masurkar')">
-      <lable for="Akhil Masurkar">Akhil Masurkar</lable><br>
-
-      <input type="radio" id="Uma_Jaishankar"  Value="Uma Jaishankar" name="Faculty" onclick="filterObjects('Uma_Jaishankar')">
-      <lable for="Uma Jaishankar">Uma Jaishankar</lable><br>
-
-      <input type="radio" id="Ulka_Padwalkar"  Value="Ulka Padwalkar" name="Faculty" onclick="filterObjects('Ulka_Padwalkar')">
-      <lable for="Ulka Padwalkar">Ulka Padwalkar</lable><br>
-    
-      <input type="radio" id="Pravin_Annadate"  Value="Pravin Annadate" name="Faculty" onclick="filterObjects('Pravin_Annadate')">
-      <lable for="Pravin Annadate">Pravin Annadate</lable><br>
-    
-      <input type="radio" id="Arun_Chavan"  Value="Arun Chavan" name="Faculty" onclick="filterObjects('Arun_Chavan')">
-      <lable for="Arun Chavan">Arun Chavan</lable><br>
-    </div>
-  </div>
-  <div class="content">
-    <div class="row">
-      <div class="column">
-      <a href="proj1.html" target="_blank">
-        <div class="card Arun_Chavan"><img src="p1.jpg" width="100%" ><br><b>Project Title :</b> Touchless Dispensor<br><b>Student Name :</b><ul><li>Kanchan Suryawanshi</li><li>Tripta Sharma</li><li>Nikita Gharat</li><li>Mounika Lokam</li></ul><b>Project Guide:</b><h4>Prof.Arun Chavan</h4></div>
-      </a>
-      </div>
-        
-      <div class="column">
-        <a href="proj2.html" target="_blank">
-        <div class="card Rama_Rao"><img src="p2.jpg" width="100%"><br><b>Project Title :</b> Medicheck<br><b>Student Name :</b><ul><li>Shashanka V</li><li>Aditi Bairolu</li><li>Divyata Kamble</li><li>Akash Singh</li></ul><b>Project Guide:</b><h4>Prof.Rama Rao</h4></div>
-        </a>
-      </div>
-      <div class="column">
-        <a href="proj3.html" target="_blank">
-        <div class="card Suvarna_Bhat"><img src="p3.jpg" width="100%"><br><b>Project Title :</b> Gesture Recognition System<br><b>Student Name :</b><ul><li>Sayli Kamble</li><li>Pooja Jadhav</li><li>Pooja Bhagat</li></ul><b>Project Guide:</b><h4>Prof.Suvarna Bhat</h4></div>
-        </a>
-      </div>
-      <div class="column">
-        <a href="proj4.html" target="_blank">
-        <div class="card Neelam_Punjabi"><img src="p4.jpg" width="100%"><br><b>Project Title :</b> Emotional Stress Indicator Using Matlab<br><b>Student Name :</b><ul><li>Varsha Sudrik</li><li>Tejashree Punde</li></ul><b>Project Guide:</b><h4>Prof.Neelam Punjabi</h4></div>
-        </a>
-      </div>
-      <div class="column">
-        <a href="proj5.html" target="_blank">
-        <div class="card Akhil_Masurkar"><img src="p5.jpg" width="100%"><br><b>Project Title :</b> Automatic Braking System<br><b>Student Name :</b><ul><li>Abbas Jawadwala</li><li>Gaurav Pandit</li><li>Prafull Ruke</li><li>Suyash Koyande</li></ul><b>Project Guide:</b><h4>Prof.Akhil Masurkar</h4></div>
-        </a>
-      </div>
-      <div class="column">
-        <a href="proj6.html" target="_blank">
-        <div class="card Girish_Gidaye"><img src="p6.jpg" width="100%"><br><b>Project Title :</b> Maze Solving Bot<br><b>Student Name :</b><ul><li>Apoorv Jagtap</li><li>Omkar Kathe</li><li>Shefali Raut</li><li>Varsha Waghchaure</li></ul><b>Project Guide:</b><h4>Prof.Girish Gidaye</h4></div>
-        </a>
-      </div>
-      <div class="column">
-        <a href="proj7.html" target="_blank">
-        <div class="card Uma_Jaishankar"><img src="p7.jpg" width="100%"><br><b>Project Title :</b> Touchscreen Skin<br><b>Student Name :</b><ul><li>Amit Pingale</li><li>Akshay Rane</li><li>Akhil Sangamwar</li><li>Mandar Rode</li></ul><b>Project Guide:</b><h4>Prof.Uma Jaishankar</h4></div>
-        </a>
-      </div>
-      <div class="column">
-        <a href="proj8.html" target="_blank">
-        <div class="card Pravin_Annadate"><img src="p8.jpg" width="100%"><br><b>Project Title :</b> Fire Fighting UAV<br><b>Student Name :</b><ul><li>Prathamesh Patkar</li><li>Ekta Rathod</li><li>Abhishek Mayekar</li><li>Tejal Gode</li></ul><b>Project Guide:</b><h4>Pravin Annadate</h4></div>
-        </a>
-      </div>
-      <div class="column">
-        <div class="card Girish_Gidaye"><img src="proj.jpg" width="100%"><br><b>Project Title :</b> VIdeas<br><b>Student Name :</b><ul><li>Omkar Pol</li><li>Ganesh Kumbhar</li><li>Akshay Salunkhe</li><li>Sankalp Gambhir</li></ul><b>Project Guide:</b><h4>Girish Gidaye</h4></div>
-      </div>
-      <div class="column Girish_Gidaye">
-        <div class="card"><img src="proj.jpg" width="100%"><br><b>Project Title :</b> VIdeas<br><b>Student Name :</b><ul><li>Omkar Pol</li><li>Ganesh Kumbhar</li><li>Akshay Salunkhe</li><li>Sankalp Gambhir</li></ul><b>Project Guide:</b>Girish Gidaye</div>
-      </div>
-      <div class="column Girish_Gidaye">
-        <div class="card"><img src="proj.jpg" width="100%"><br><b>Project Title :</b> VIdeas<br><b>Student Name :</b><ul><li>Omkar Pol</li><li>Ganesh Kumbhar</li><li>Akshay Salunkhe</li><li>Sankalp Gambhir</li></ul><b>Project Guide:</b>Girish Gidaye</div>
-      </div>
-      <!-- <div class="column">
+        <div class="column Rama_Rao">
+          <a href="proj2.html" target="_blank">
+            <div class="card "><img src="p2.jpg" width="100%"><br><b>Project Title :</b> Medicheck<br><b>Student Name
+                :</b>
+              <ul>
+                <li>Shashanka V</li>
+                <li>Aditi Bairolu</li>
+                <li>Divyata Kamble</li>
+                <li>Akash Singh</li>
+              </ul><b>Project Guide:</b>
+              <h4>Prof.Rama Rao</h4>
+            </div>
+          </a>
+        </div>
+        <div class="column Suvarna_Bhat">
+          <a href="proj3.html" target="_blank">
+            <div class="card "><img src="p3.jpg" width="100%"><br><b>Project Title :</b> Gesture Recognition
+              System<br><b>Student Name :</b>
+              <ul>
+                <li>Sayli Kamble</li>
+                <li>Pooja Jadhav</li>
+                <li>Pooja Bhagat</li>
+              </ul><b>Project Guide:</b>
+              <h4>Prof.Suvarna Bhat</h4>
+            </div>
+          </a>
+        </div>
+        <div class="column Neelam_Punjabi">
+          <a href="proj4.html" target="_blank">
+            <div class="card "><img src="p4.jpg" width="100%"><br><b>Project Title :</b> Emotional Stress Indicator
+              Using Matlab<br><b>Student Name :</b>
+              <ul>
+                <li>Varsha Sudrik</li>
+                <li>Tejashree Punde</li>
+              </ul><b>Project Guide:</b>
+              <h4>Prof.Neelam Punjabi</h4>
+            </div>
+          </a>
+        </div>
+        <div class="column Akhil_Masurkar">
+          <a href="proj5.html" target="_blank">
+            <div class="card "><img src="p5.jpg" width="100%"><br><b>Project Title :</b> Automatic Braking
+              System<br><b>Student Name :</b>
+              <ul>
+                <li>Abbas Jawadwala</li>
+                <li>Gaurav Pandit</li>
+                <li>Prafull Ruke</li>
+                <li>Suyash Koyande</li>
+              </ul><b>Project Guide:</b>
+              <h4>Prof.Akhil Masurkar</h4>
+            </div>
+          </a>
+        </div>
+        <div class="column Girish_Gidaye">
+          <a href="proj6.html" target="_blank">
+            <div class="card "><img src="p6.jpg" width="100%"><br><b>Project Title :</b> Maze Solving Bot<br><b>Student
+                Name :</b>
+              <ul>
+                <li>Apoorv Jagtap</li>
+                <li>Omkar Kathe</li>
+                <li>Shefali Raut</li>
+                <li>Varsha Waghchaure</li>
+              </ul><b>Project Guide:</b>
+              <h4>Prof.Girish Gidaye</h4>
+            </div>
+          </a>
+        </div>
+        <div class="column Uma_Jaishankar">
+          <a href="proj7.html" target="_blank">
+            <div class="card "><img src="p7.jpg" width="100%"><br><b>Project Title :</b> Touchscreen Skin<br><b>Student
+                Name :</b>
+              <ul>
+                <li>Amit Pingale</li>
+                <li>Akshay Rane</li>
+                <li>Akhil Sangamwar</li>
+                <li>Mandar Rode</li>
+              </ul><b>Project Guide:</b>
+              <h4>Prof.Uma Jaishankar</h4>
+            </div>
+          </a>
+        </div>
+        <div class="column Pravin_Annadate">
+          <a href="proj8.html" target="_blank">
+            <div class="card "><img src="p8.jpg" width="100%"><br><b>Project Title :</b> Fire Fighting UAV<br><b>Student
+                Name :</b>
+              <ul>
+                <li>Prathamesh Patkar</li>
+                <li>Ekta Rathod</li>
+                <li>Abhishek Mayekar</li>
+                <li>Tejal Gode</li>
+              </ul><b>Project Guide:</b>
+              <h4>Prof.Pravin Annadate</h4>
+            </div>
+          </a>
+        </div>
+        <!-- <div class="column Girish_Gidaye">
+          <div class="card "><img src="proj.jpg" width="100%"><br><b>Project Title :</b> VIdeas<br><b>Student Name :</b>
+            <ul>
+              <li>Omkar Pol</li>
+              <li>Ganesh Kumbhar</li>
+              <li>Akshay Salunkhe</li>
+              <li>Sankalp Gambhir</li>
+            </ul><b>Project Guide:</b>
+            <h4>Girish Gidaye</h4>
+          </div>
+        </div>
+        <div class="column Girish_Gidaye">
+          <div class="card"><img src="proj.jpg" width="100%"><br><b>Project Title :</b> VIdeas<br><b>Student Name :</b>
+            <ul>
+              <li>Omkar Pol</li>
+              <li>Ganesh Kumbhar</li>
+              <li>Akshay Salunkhe</li>
+              <li>Sankalp Gambhir</li>
+            </ul><b>Project Guide:</b>
+            <h4>Girish Gidaye</h4>
+          </div>
+        </div>
+        <div class="column Girish_Gidaye">
+          <div class="card"><img src="proj.jpg" width="100%"><br><b>Project Title :</b> VIdeas<br><b>Student Name :</b>
+            <ul>
+              <li>Omkar Pol</li>
+              <li>Ganesh Kumbhar</li>
+              <li>Akshay Salunkhe</li>
+              <li>Sankalp Gambhir</li>
+            </ul><b>Project Guide:</b>
+            <h4>Girish Gidaye</h4>
+          </div>
+        </div> -->
+        <!-- <div class="column">
         <div class="card"><img src="proj.jpg" width="100%"><br><b>Project Title :</b> VIdeas<br><b>Student Name :</b><ul><li>Omkar Pol</li><li>Ganesh Kumbhar</li><li>Akshay Salunkhe</li><li>Sankalp Gambhir</li></ul><b>Project Guide:</b>Girish Gidaye</div>
       </div>
       <div class="column">
@@ -326,9 +434,9 @@
       <div class="column">
         <div class="card"><img src="proj.jpg" width="100%"><br><b>Project Title :</b> VIdeas<br><b>Student Name :</b><ul><li>Omkar Pol</li><li>Ganesh Kumbhar</li><li>Akshay Salunkhe</li><li>Sankalp Gambhir</li></ul><b>Project Guide:</b>Girish Gidaye</div>
       </div> -->
+      </div>
     </div>
   </div>
- </div>
-<script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
