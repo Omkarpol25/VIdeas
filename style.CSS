@@ -133,6 +133,7 @@ h1
   clear: right;
   border: 2px solid black;
   padding: 2px 2px;
+  overflow: hidden;
 }
 #cont
 {
@@ -145,6 +146,8 @@ h1
   padding: 10px 10px 10px 10px;
   margin: 2px 2px;
   height: 410px;
+  overflow: hidden;
+  display:none;
 }
 .column a{
   text-decoration: none;
@@ -154,14 +157,7 @@ input[type=text]
 {
   width: 245px;
 }
-.card{
-  display: none;
-}
-.card img
-{
-  width: 230px;
-  height: 200px;
-}
+
 @media screen and (max-width: 600px) {
   .column {
     width: 220px;
@@ -183,6 +179,14 @@ input[type=text]
   padding: 4px 4px;
   text-align: left;
   background-color: #f1f1f1;
+  /* display:none; */
+  float: left;
+  text-align: center;
+}
+.card img
+{
+  width: 230px;
+  height: 200px;
 }
 h3
 {
