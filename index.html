@@ -53,19 +53,19 @@
             <li><input type="radio" name="subject" id="All" checked onclick="filterSelection('all')">
               <label for="All">All</label>
             </li>
-            <li><input type="radio" name="subject" id="CS">
+            <li><input type="radio" name="subject" id="CS" onclick="filterSelection('CS')">
               <label for="CS">CS</label>
             </li>
-            <li><input type="radio" name="subject" id="IT">
+            <li><input type="radio" name="subject" id="IT" onclick="filterSelection('IT')">
               <label for="IT">IT</label>
             </li>
-            <li><input type="radio" name="subject" id="EXTC">
+            <li><input type="radio" name="subject" id="EXTC" onclick="filterSelection('EXTC')">
               <label for="EXTC">EXTC</label>
             </li>
-            <li><input type="radio" name="subject" id="ETRX">
+            <li><input type="radio" name="subject" id="ETRX" onclick="filterSelection('ETRX')">
               <label for="ETRX">ETRX</label>
             </li>
-            <li><input type="radio" name="subject" id="Bio_Med">
+            <li><input type="radio" name="subject" id="Bio_Med" onclick="filterSelection('Bio_Med')">
               <label for="Bio_Med">Bio Med</label>
             </li>
           </ul>
@@ -79,21 +79,21 @@
       <div>
         <input type="radio" id="Show_All" Value="Show All" name="field" checked onclick="filterSelection('all')">
         <lable for="Show All">Show All</lable><br>
-
-        <input type="radio" id="Networking" Value="Networking" name="field" onclick="filterSelection('Networking')">
-        <lable for="Networking">Networking</lable><br>
+        
+        <input type="radio" id="Embedded" Value="Embedded" name="field" onclick="filterSelection('Embedded')">
+        <lable for="Embedded">Embedded</lable><br>
+        
+        <input type="radio" id="Hardware" Value="Hardware" name="field" onclick="filterSelection('Hardware')">
+        <lable for="Hardware">Hardware</lable><br>
 
         <input type="radio" id="Web_Tech" Value="Web_Tech" name="field" onclick="filterSelection('Web_Tech')">
         <lable for="Web Technology">Web Technology</lable><br>
 
-        <input type="radio" id="Database" Value="Database" name="field" onclick="filterSelection('Database')">
-        <lable for="Database">Database</lable><br>
+        <input type="radio" id="Image_Processing" Value="Image_Processing" name="field" onclick="filterSelection('Image_Processing')">
+        <lable for="Image_Processing">Image_Processing</lable><br>
 
-        <input type="radio" id="AI" Value="AI" name="field" onclick="filterSelection('AI')">
-        <lable for="Artificial Intelligence">Artificial Intelligence</lable><br>
-
-        <input type="radio" id="IP" Value="IP" name="field" onclick="filterSelection('IP')">
-        <lable for="Image Processing">Image Processing</lable><br>
+        <input type="radio" id="Power_Electronics" Value="Power_Electronics" name="field" onclick="filterSelection('Power_Electronics')">
+        <lable for="Hardware">Power_Electronics</lable><br>
 
         <input type="radio" id="Robotics" Value="Robotics" name="field" onclick="filterSelection('Robotics')">
         <lable for="Robotics">Robotics</lable><br>
@@ -117,10 +117,6 @@
           onclick="filterSelection('Uma_Jaishankar')">
         <lable for="Uma Jaishankar">Uma Jaishankar</lable><br>
 
-        <input type="radio" id="Ulka_Padwalkar" Value="Ulka Padwalkar" name="Faculty"
-          onclick="filterSelection('Ulka_Padwalkar')">
-        <lable for="Ulka Padwalkar">Ulka Padwalkar</lable><br>
-
         <input type="radio" id="Pravin_Annadate" Value="Pravin Annadate" name="Faculty"
           onclick="filterSelection('Pravin_Annadate')">
         <lable for="Pravin Annadate">Pravin Annadate</lable><br>
@@ -128,26 +124,34 @@
         <input type="radio" id="Arun_Chavan" Value="Arun Chavan" name="Faculty"
           onclick="filterSelection('Arun_Chavan')">
         <lable for="Arun Chavan">Arun Chavan</lable><br>
+        
+        <input type="radio" id="Ulka_Padwalkar" Value="Ulka Padwalkar" name="Faculty"
+          onclick="filterSelection('Ulka_Padwalkar')">
+        <lable for="Ulka Padwalkar">Ulka Padwalkar</lable><br>
       </div>
     </div>
     <div class="content">
       <div class="row">
-        <div class="column Arun_Chavan">
+        <div class="column Arun_Chavan Hardware Bio_Med">
           <a href="proj1.html" target="_blank">
-            <div class="card "><img src="p1.jpg" width="100%"><br><b>Project Title :</b> Touchless
-              Dispensor<br><b>Student Name :</b>
+            <div class="card "><img src="p1.jpg" width="100%"><br><b>Project Title :</b> Touchless Dispensor<br>
+              <b>Student Name :</b>
               <ul>
                 <li>Kanchan Suryawanshi</li>
                 <li>Tripta Sharma</li>
                 <li>Nikita Gharat</li>
                 <li>Mounika Lokam</li>
               </ul><b>Project Guide:</b>
-              <h4>Prof.Arun Chavan</h4>
+              <h4>Prof.Arun Chavan</h4><br>
+              <b>Field:</b>
+              <h5>Hardware</h5><br>
+              <b>Department:</b>
+              <h6>Bio Med</h6>
             </div>
           </a>
         </div>
 
-        <div class="column Rama_Rao">
+        <div class="column Rama_Rao Embedded EXTC">
           <a href="proj2.html" target="_blank">
             <div class="card "><img src="p2.jpg" width="100%"><br><b>Project Title :</b> Medicheck<br><b>Student Name
                 :</b>
@@ -157,11 +161,15 @@
                 <li>Divyata Kamble</li>
                 <li>Akash Singh</li>
               </ul><b>Project Guide:</b>
-              <h4>Prof.Rama Rao</h4>
+              <h4>Prof.Rama Rao</h4><br>
+              <b>Field:</b>
+              <h5>Embedded</h5><br>
+              <b>Department:</b>
+              <h6>EXTC</h6>
             </div>
           </a>
         </div>
-        <div class="column Suvarna_Bhat">
+        <div class="column Suvarna_Bhat Web_Tech CS">
           <a href="proj3.html" target="_blank">
             <div class="card "><img src="p3.jpg" width="100%"><br><b>Project Title :</b> Gesture Recognition
               System<br><b>Student Name :</b>
@@ -170,11 +178,15 @@
                 <li>Pooja Jadhav</li>
                 <li>Pooja Bhagat</li>
               </ul><b>Project Guide:</b>
-              <h4>Prof.Suvarna Bhat</h4>
+              <h4>Prof.Suvarna Bhat</h4><br>
+              <b>Field:</b>
+              <h5>Web Technology</h5><br>
+              <b>Department:</b>
+              <h6>CS</h6>
             </div>
           </a>
         </div>
-        <div class="column Neelam_Punjabi">
+        <div class="column Neelam_Punjabi Embedded Bio_Med">
           <a href="proj4.html" target="_blank">
             <div class="card "><img src="p4.jpg" width="100%"><br><b>Project Title :</b> Emotional Stress Indicator
               Using Matlab<br><b>Student Name :</b>
@@ -182,11 +194,15 @@
                 <li>Varsha Sudrik</li>
                 <li>Tejashree Punde</li>
               </ul><b>Project Guide:</b>
-              <h4>Prof.Neelam Punjabi</h4>
+              <h4>Prof.Neelam Punjabi</h4><br>
+              <b>Field:</b>
+              <h5>Embedded</h5><br>
+              <b>Department:</b>
+              <h6>Bio Med</h6>
             </div>
           </a>
         </div>
-        <div class="column Akhil_Masurkar">
+        <div class="column Akhil_Masurkar Embedded Power_Electronics ETRX">
           <a href="proj5.html" target="_blank">
             <div class="card "><img src="p5.jpg" width="100%"><br><b>Project Title :</b> Automatic Braking
               System<br><b>Student Name :</b>
@@ -196,11 +212,15 @@
                 <li>Prafull Ruke</li>
                 <li>Suyash Koyande</li>
               </ul><b>Project Guide:</b>
-              <h4>Prof.Akhil Masurkar</h4>
+              <h4>Prof.AkhilMasurkar</h4><br>
+              <b>Field:</b>
+              <h5>Embedded & PowerElectronics</h5><br>
+              <b>Department:</b>
+              <h6>ETRX</h6>
             </div>
           </a>
         </div>
-        <div class="column Girish_Gidaye">
+        <div class="column Girish_Gidaye Embedded Image_Processing ETRX">
           <a href="proj6.html" target="_blank">
             <div class="card "><img src="p6.jpg" width="100%"><br><b>Project Title :</b> Maze Solving Bot<br><b>Student
                 Name :</b>
@@ -210,11 +230,15 @@
                 <li>Shefali Raut</li>
                 <li>Varsha Waghchaure</li>
               </ul><b>Project Guide:</b>
-              <h4>Prof.Girish Gidaye</h4>
+              <h4>Prof.Girish Gidaye</h4><br>
+              <b>Field:</b>
+              <h5>Embedded & Image Processing</h5><br>
+              <b>Department:</b>
+              <h6>ETRX</h6>
             </div>
           </a>
         </div>
-        <div class="column Uma_Jaishankar">
+        <div class="column Uma_Jaishankar Human_Machine ETRX">
           <a href="proj7.html" target="_blank">
             <div class="card "><img src="p7.jpg" width="100%"><br><b>Project Title :</b> Touchscreen Skin<br><b>Student
                 Name :</b>
@@ -224,11 +248,15 @@
                 <li>Akhil Sangamwar</li>
                 <li>Mandar Rode</li>
               </ul><b>Project Guide:</b>
-              <h4>Prof.Uma Jaishankar</h4>
+              <h4>Prof.Uma Jaishankar</h4><br>
+              <b>Field:</b>
+              <h5>Human Machine Interaction</h5><br>
+              <b>Department:</b>
+              <h6>ETRX</h6>
             </div>
           </a>
         </div>
-        <div class="column Pravin_Annadate">
+        <div class="column Pravin_Annadate Image_Processing ETRX">
           <a href="proj8.html" target="_blank">
             <div class="card "><img src="p8.jpg" width="100%"><br><b>Project Title :</b> Fire Fighting UAV<br><b>Student
                 Name :</b>
@@ -238,7 +266,11 @@
                 <li>Abhishek Mayekar</li>
                 <li>Tejal Gode</li>
               </ul><b>Project Guide:</b>
-              <h4>Prof.Pravin Annadate</h4>
+              <h4>Prof.Pravin Annadate</h4><br>
+              <b>Field:</b>
+              <h5>Image Processing</h5><br>
+              <b>Department:</b>
+              <h6>ETRX</h6>
             </div>
           </a>
         </div>
