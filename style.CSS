@@ -145,7 +145,7 @@ h1
   width: 262px;
   padding: 10px 10px 10px 10px;
   margin: 2px 2px;
-  height: 410px;
+  height: 450px;
   overflow: hidden;
   display:none;
 }
@@ -158,21 +158,6 @@ input[type=text]
   width: 245px;
 }
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 220px;
-    display: block;
-    margin-bottom: 5px;
-    padding: 4px 2px;
-  }
-}
-/* Clear floats after the columns */
-/* .row:after {
-  content: "";
-  display: table;
-  clear: both;
-} */
-
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
@@ -181,7 +166,7 @@ input[type=text]
   background-color: #f1f1f1;
   /* display:none; */
   float: left;
-  text-align: center;
+  /* text-align: center; */
 }
 .card img
 {
@@ -204,6 +189,20 @@ h4
   text-decoration: none;
   display: inline;
   font-weight: normal;
+}
+h5
+{
+  text-decoration: none;
+  display: inline;
+  font-weight: normal;
+  font-size: 1rem;
+}
+h6
+{
+  text-decoration: none;
+  display: inline;
+  font-weight: normal;
+  font-size: 1rem;
 }
 /* .open-button {
   background-color: #555;
@@ -407,6 +406,12 @@ li button
   {
     width: 8px;
     height: 8px;
+  }
+  .column {
+    width: 220px;
+    /* display: block; */
+    margin-bottom: 5px;
+    padding: 4px 2px;
   }
   .content
   {
